@@ -1,4 +1,4 @@
-<?php require_once '../control/img-upload.php'; ?>
+<?php require_once 'control/img-upload.php'; ?>
 <!-- section allocated to uploading artwork -->
 	<section class="main">
 		<div class="quote-form">
@@ -8,12 +8,12 @@
 				enctype="multipart/form-data">
 
 					<span class="warning"><?php isset($file_E)? print $file_E : ''; ?></span>
-					<div><input type="file" name="file" value="" /></div>
+					<div style="margin-bottom: 30px;"><input type="file" name="file" value="" /></div>
 
 					<span><?php isset($errorMsg)? print($errorMsg): null; ?></span>
-					<div class="g-recaptcha" data-sitekey="6LdVEg4UAAAAAPcfNwXOe3UFMkXt0Gk6CwsV9_5I"></div>
+					<!-- <div class="g-recaptcha" data-sitekey="6LdVEg4UAAAAAPcfNwXOe3UFMkXt0Gk6CwsV9_5I"></div> -->
 					
-					<button type="submit">Upload image</button>
+					<button class="form-submit" type="submit">Upload image</button>
 				</form>
 			</div>
 		</div>

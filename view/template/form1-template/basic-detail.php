@@ -1,6 +1,7 @@
 
 
 <div class="user-input">
+	<h3 class="form-title">Basic Details</h3>
 		<span><?php isset($error_message['name error'])? print $error_message['name error'] : '';  ?></span>
 		<div>
 			<input placeholder="name" type="text" name="name" value="<?php isset($name)? print $name: '' ;?>"  >

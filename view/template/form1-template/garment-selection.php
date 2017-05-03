@@ -19,7 +19,7 @@
 		           			<input type="radio" name="garment-type" value="tshirt"  
 		           				<?php isset($garment_type)? print checked_option($garment_type, 'tshirt'): ''?>
 		           			 >
-		           			<img src="../view/img/placeholder.png">
+		           			<img src="view/img/placeholder.png">
   		    		</label>
   		    	</li>
   		    </div>
@@ -30,7 +30,7 @@
 	           			<input type="radio" name="garment-type" value="hoodie"
 	           			<?php isset($garment_type)? print checked_option($garment_type, 'hoodie'):''?>
 	           			>
-	           			<img src="../view/img/placeholder.png">
+	           			<img src="view/img/placeholder.png">
 	        		</label>
 	        	</li>
 	        </div>
@@ -41,7 +41,7 @@
 	           			<input type="radio" name="garment-type" value="sweatshirt"
 	           			<?php isset($garment_type)? print checked_option($garment_type,'sweatshirt'):''?>
 	           			>
-	           			<img src="../view/img/placeholder.png">
+	           			<img src="view/img/placeholder.png">
 	        		</label>
 	        	</li>
 	        </div>
@@ -53,7 +53,7 @@
   		           		<input type="radio" name="garment-type" value="tote-bag"
   		           			<?php isset($garment_type)? print checked_option($garment_type, 'tote-bag'): ''?>
   		           		>
-  		           		<img src="../view/img/placeholder.png">
+  		           		<img src="view/img/placeholder.png">
 	  		    	</label>
   		    	</li>
   		    </div>
@@ -64,7 +64,7 @@
   		           		<input type="radio" name="garment-type" value="cap"
   		           			<?php isset($garment_type)? print checked_option($garment_type, 'cap'): ''?>
   		           		>
-  		           		<img src="../view/img/placeholder.png">
+  		           		<img src="view/img/placeholder.png">
   		        	</label>
 		        </li>
 		    </div>
@@ -75,7 +75,7 @@
   		           		<input type="radio" name="garment-type" value="other"
   		           			<?php isset($garment_type)? print checked_option($garment_type, 'other'): ''?>
   		           		>
-  		           		<img src="../view/img/placeholder.png">
+  		           		<img src="view/img/placeholder.png">
   		        	</label>
 		        </li>
 	        <div>

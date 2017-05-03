@@ -1,7 +1,7 @@
 <?php 
 		// function rendering templates 
 		function render_template($template, $title='Siani Print &trade;'){
-			require_once '../view/template/'.$template.'.php';
+			require_once 'view/template/'.$template.'.php';
 		}
 
 		function render_page($page, $title='Siani Print &trade;'){
@@ -13,14 +13,6 @@
 				return true;
 			}else{ return false;}
 		}
-
-
-
-
-
-
-
-
 
 
 		// cleaning all basic data input

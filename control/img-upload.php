@@ -41,16 +41,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					$file_E = 'File to big. Maximum 3GB';
 				}else {
 					// because everything including the image is working here a function is set to store the data into a database and send it to our email inbox. if that is successfull then the image is uploaded.
-					if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-						$key = '6LdVEg4UAAAAADvdRqRsI0GGJE7TVGPbjCkoU2Yg';
-						$verify_response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$key.'&response='.$_POST['g-recaptcha-response']);
+					// if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+					// 	$key = '6LdVEg4UAAAAADvdRqRsI0GGJE7TVGPbjCkoU2Yg';
+					// 	$verify_response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$key.'&response='.$_POST['g-recaptcha-response']);
 
-						$responseData = json_decode($verify_response);
+					// 	$responseData = json_decode($verify_response);
 						
-						if($responseData->success){
-							move_uploaded_file($uploadTmp, "../artwork-upload/$uploadName"); 
+					// 	if($responseData->success){
+							move_uploaded_file($uploadTmp, "artwork-upload/$uploadName"); 
 							 		//connect to mysql and add all relevant content into the database
-									require_once('../model/db_con/connect-mysql.php');
+									require_once('model/db_con/connect-mysql.php');
 									// checks for connection
 									if ($mysqli->connect_error) {
 							           // for not nothing happens if the connection fails
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 									$mysqli->close();
 									
 									// sending email 
-									require_once('../model/PHPMailer/PHPMailerAutoload.php');
+									require_once('model/PHPMailer/PHPMailerAutoload.php');
 
 									$email = new PHPMailer;
 									$email->From = "info@sianiprint.co.uk";
@@ -139,14 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 										// currently processing the format to the screen but ultimatly if the email is succesfuly sent the user will be redirected to a new page.
 										header('location: quote.php?quote-success');
 									} else {$warning = 'There was an error somewhere.';}						
-						}else {
-							$errorMsg = 'Robot verification failed, please try again.';
-							$file_E = 'Due to failed identification, please upload artwork again.';
-						}
-					}else {
-						$errorMsg = 'Please click on the reCAPTCHA box.';
-						$file_E = 'Due to failed identification, please upload artwork again.';
-					}
+					// 	}else {
+					// 		$errorMsg = 'Robot verification failed, please try again.';
+					// 		$file_E = 'Due to failed identification, please upload artwork again.';
+					// 	}
+					// }else {
+					// 	$errorMsg = 'Please click on the reCAPTCHA box.';
+					// 	$file_E = 'Due to failed identification, please upload artwork again.';
+					// }
 				}
 			}			
 		}				

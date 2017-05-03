@@ -1,8 +1,8 @@
 <?php ob_start(); // ob flushed to hold back container as session is starting in this page 
-	require_once '../control/functions.php'; 
+	require_once 'control/functions.php'; 
 	render_template('header', 'Get a Quote');
 	isset($error_message['error'])? print $error_message['error'] : '';
-	include'../view/template/menu2.php';
+	include'view/template/menu2.php';
 
 
 //checking for uri, if set to a certain param different html syntax are triggered. 

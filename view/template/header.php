@@ -1,4 +1,4 @@
-<?php session_start();  require_once'../control/functions.php'; ?>
+<?php session_start();  require_once'control/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
 	<meta itemprop="description" content=".......">
 	<meta name="keywords" content=".......">
 	
-	<link rel="stylesheet" type="text/css" href="../view/css/main.css">
+	<link rel="stylesheet" type="text/css" href="view/css/main.css">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
